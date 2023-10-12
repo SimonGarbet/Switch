@@ -5,7 +5,10 @@ import switchLogo from '../../assets/switch-logo.png';
 import '../../scss/style.scss';
 
 
-function DayLocation({DayNightToggle}) {
+function DayLocation({DayNightToggle, locationTarget}) {
+
+  //console.log(locationTarget)
+
   return (
     <div>
       <h1>NIGHTLOCATION</h1>
