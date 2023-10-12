@@ -1,0 +1,28 @@
+
+@import '../pages/Home/home';
+@import '../pages/DayLocation/daylocation';
+@import '../pages//NightLocation/nightlocation';
+@import '../pages/Error/error';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+@font-face {
+  font-family: "Vallen Gaye";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Vallengaye.otf") format("opentype");
+};
+
+*, *::before, *::after {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    //border: red 1px solid;
+  }
+
+  #root{
+    height: 100dvh;
+}
