@@ -1,0 +1,80 @@
+[
+    {"id": 1, 
+    "town":"Angkor Wat, Cambodge", 
+    "dayURL": "https://media.routard.com/image/07/0/angkor-wat.1583070.w630.jpg", 
+    "nightURL":"https://markszelistowski.com/wp-content/uploads/2014/12/IMG_00392-1024x523.jpg", 
+    "description":"Angkor Vat ou Angkor Wat est le plus grand des temples et le plus grand monument religieux du monde. Initialement hindou et dédié au dieu Vishnou pour l'empire khmer rompant avec la tradition Shaiva des rois précédents. Il a progressivement été transformé en temple bouddhiste vers la fin du XIIe siècle.", 
+    "distance": "9300km"},
+
+    {"id": 2, 
+    "town":"Athènes, Grèce", 
+    "dayURL": "https://blog.bourse-des-vols.com/wp-content/uploads/grece-athenes-acropole-vue-paysage.jpg", 
+    "nightURL":"https://cdn.getyourguide.com/img/tour/5c57fd7c8dca5.jpeg/99.jpg", 
+    "description":"Athènes, capitale de la Grèce, est une ville empreinte d'une histoire fascinante qui remonte à plus de 3 400 ans. Elle est réputée pour son rôle fondateur dans la démocratie, la philosophie et les arts classiques, avec des monuments emblématiques comme le Parthénon et l'Acropole. Cette métropole moderne offre également une scène culturelle vibrante, une cuisine délicieuse et une vie nocturne animée, faisant d'Athènes une destination incontournable pour ceux qui souhaitent explorer à la fois l'ancien et le contemporain dans une seule ville.", 
+    "distance": "2200km"
+},
+
+    {"id": 3, 
+    "town":"Baie d'Ha Long, Vietnam", 
+    "dayURL": "https://blog.altiplano-voyage.com/wp-content/uploads/2011/11/Baie-dHalong-AdobeStock_73560454.jpeg", 
+    "nightURL":"https://images.mnstatic.com/b7/bd/b7bdf89cf75aeac6164fe1eb3799aa31.jpg", 
+    "description":"La Baie d'Ha Long, perle du Vietnam, est une œuvre d'art naturelle inégalée. Ses eaux émeraude caressent doucement des milliers d'îles karstiques aux formes fantastiques, créant un paysage marin d'une beauté enchanteresse. Les pics calcaires surgissent majestueusement de la mer, comme des sentinelles silencieuses, tandis que des grottes mystérieuses se cachent dans leurs flancs. Naviguer à travers ce dédale de merveilles naturelles est une expérience magique, une invitation à l'émerveillement. Les plages de sable blanc, les villages de pêcheurs flottants et la sérénité qui règne ici en font un lieu de contemplation et d'aventure, où l'esprit peut s'évader et se ressourcer au cœur de la nature. La Baie d'Ha Long est véritablement un joyau du monde, un endroit où la terre, la mer et le ciel se fondent en une harmonie parfaite.", 
+    "distance": "9000km"
+},
+
+    {"id": 4, 
+    "town":"Bath, Angleterre", 
+    "dayURL": "https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/England/Bath/the-roman-baths-bath.jpg", 
+    "nightURL":"https://previews.123rf.com/images/ianwool/ianwool1403/ianwool140300134/26891873-overlooking-the-georgian-city-of-bath-from-alexandra-park-on-top-of-beechen-cliff-somerset-england.jpg", 
+    "description":"Bath, en Angleterre, est une ville qui séduit par sa beauté intemporelle. Ses bâtiments géorgiens en pierre dorée et son histoire thermale depuis l'époque romaine en font une destination unique. L'abbaye de Bath, majestueuse, domine la ville, ajoutant une touche de grandeur à son charme. Une visite à Bath vous plongera dans un monde d'élégance et d'histoire captivante.", 
+    "distance": "300km"
+},
+
+    {"id": 5, "town":"Bhoutan", 
+    "dayURL": "https://images.partir.com/_ZfqQw8nMH3rJsOZXcRRZYpZ4oY=/1920x/panoramique/mobile/bhoutan.jpg", 
+    "nightURL":"https://www.insidehimalayas.com/wp-content/uploads/2018/06/16877920653_f5c78b3fc2_k.jpg", 
+    "description":"Le Bhoutan, ce joyau caché de l'Himalaya, est une destination extraordinaire qui émerveille par sa beauté naturelle et sa spiritualité profonde. Niché entre l'Inde et le Tibet, ce petit royaume est célèbre pour ses paysages montagneux à couper le souffle, ses monastères perchés sur des crêtes escarpées, et son engagement envers le bonheur national brut plutôt que le produit intérieur brut. Le Bhoutan offre une immersion dans une culture bouddhiste riche, où la paix et la spiritualité règnent en maître. Les festivals colorés, les drapeaux de prière flottants et les sourires chaleureux des habitants vous accueillent à chaque tournant. Une visite au Bhoutan est un voyage au cœur de la sérénité, où la nature et la spiritualité se rejoignent pour créer une expérience inoubliable.", 
+    "distance": "6000km"
+},
+
+    {"id": 6, 
+    "town":"Budapest, Hongrie", 
+    "dayURL": "https://www.toulouse.aeroport.fr/sites/default/files/styles/atb_xlarge/public/jpg/Hongrie-Budapest-Bastion-Cover_mxl.jpg", 
+    "nightURL":"https://www.votretourdumonde.com/wp-content/uploads/2018/07/o%C3%B9-sortir-%C3%A0-budapest.jpg", 
+    "description":"Budapest, surnommée la 'Perle du Danube', est une ville enchanteresse où l'histoire, la culture et la beauté se fondent harmonieusement. Cette capitale hongroise offre un voyage à travers le temps, avec ses bâtiments baroques majestueux, ses bains thermaux historiques et ses ponts élégants qui enjambent le fleuve Danube. De jour, les rues pavées regorgent de cafés animés et de marchés colorés, tandis que la nuit, les rives du Danube s'illuminent pour créer une scène romantique incomparable. Budapest est aussi célèbre pour ses festivals artistiques et musicaux, ajoutant une touche de créativité à son charme classique. Une visite à Budapest promet une immersion dans une culture riche et une expérience visuelle captivante à chaque coin de rue.", 
+    "distance": "1300km"
+},
+
+    {"id": 7, "town":"Canyon d'Antelope, Arizona, États-Unis", 
+    "dayURL": "https://cdn.getyourguide.com/img/location/540dc88ab688e-m1409674021.jpg/99.jpg", 
+    "nightURL":"https://i0.wp.com/stevenduncanart.com/dir/wp-content/uploads/2015/12/stars-in-antelope-canyon.jpg?ssl=1", 
+    "description":"L'Antelope Canyon est une merveille naturelle située dans le désert de l'Arizona, aux États-Unis. C'est une gorge de grès sculptée par des millions d'années d'érosion éolienne et fluviale, créant des formes et des couleurs extraordinaires. Les parois étroites et ondulées de l'Antelope Canyon filtrent la lumière du soleil d'une manière magique, projetant des rayons de lumière qui illuminent les tons rouges et orangés des parois de la gorge. Cette symphonie de couleurs et de formes en fait un lieu prisé des photographes et des amoureux de la nature du monde entier. En explorant l'Antelope Canyon, on a l'impression de pénétrer dans un monde irréel, où la beauté de la nature est à son apogée, et où chaque tournant révèle une nouvelle merveille sculptée par le temps.", 
+    "distance": "8700km"
+},
+
+    {"id": 8, 
+    "town":"Canyon de Charyn, Kazakhstan", 
+    "dayURL": "https://static.nationalgeographic.fr/files/styles/image_3200/public/silkroad_shutterstock_1236828025_hr.jpg?", 
+    "nightURL":"https://c.stocksy.com/a/wxQ700/z9/1771956.jpg", 
+    "description":"Le Canyon de Charyn, au Kazakhstan, est une merveille géologique où les roches rouges et ocres créent un paysage de canyon à couper le souffle. Sculpté par la rivière Charyn sur des millions d'années, il présente des formations rocheuses fascinantes, dont certaines rappellent le célèbre Grand Canyon américain. Lorsque le soleil se couche, le canyon prend des teintes dorées et rouges encore plus éblouissantes. C'est un endroit magique pour les amateurs de randonnée et de photographie, offrant une expérience unique au cœur de la nature sauvage du Kazakhstan.", 
+    "distance": "5200km"
+},
+
+    {"id": 9, 
+    "town":"Cappadoce, Turquie", 
+    "dayURL": "https://www.tourmag.com/photo/art/grande/69943627-48842327.jpg?v=1673015468", 
+    "nightURL":"https://www.icastelli.net/photo/images/cappadocia-cave-resort-spa_1000_560_1326_1471446165.jpg", 
+    "description":"La Cappadoce, en Turquie, est un véritable chef-d'œuvre géologique. Cette région unique est célèbre pour ses formations rocheuses spectaculaires, appelées cheminées de fées, qui ont été façonnées par l'érosion au fil des millénaires. Les vallées de la Cappadoce offrent un paysage lunaire, où des rochers aux formes étranges émergent du sol, créant un décor mystique et féerique. De plus, la Cappadoce abrite de nombreuses grottes et églises rupestres datant de l'époque byzantine, ce qui en fait une destination riche en histoire et en culture. Les montgolfières colorées qui survolent ce paysage enchanteur au lever du soleil ajoutent une touche de magie supplémentaire à cette expérience inoubliable.", 
+    "distance": "2400km"
+},
+
+    {"id": 10, 
+    "town":"Château de Blarney, Irlande", 
+    "dayURL": "https://mediaim.expedia.com/destination/2/fe20ef0db1593342692ecc312843e5e3.jpg", 
+    "nightURL":"https://images.ireland.com/media/Images/Clare/8548ea1710c3417cb942d779b93163c7.jpg", 
+    "description":"Le Château de Blarney, en Irlande, est une icône historique qui attire des visiteurs du monde entier. Ce château médiéval majestueux est célèbre pour la pierre de Blarney, réputée pour conférer le don de l'éloquence à ceux qui l'embrassent. Les jardins luxuriants qui entourent le château offrent une toile de fond pittoresque pour une promenade tranquille. L'ascension des escaliers étroits pour atteindre la pierre de Blarney est une aventure en soi, récompensée par une vue panoramique imprenable sur la campagne irlandaise. L'atmosphère historique et l'aura de mystère qui entourent le Château de Blarney en font un lieu incontournable pour les voyageurs en quête de l'essence de l'Irlande.", 
+    "distance": "1100km"
+}
+
+
+]
