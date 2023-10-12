@@ -5,7 +5,7 @@ import '../../scss/style.scss';
 
 function Home() {
   return (
-    <div>
+    <div className='globalHome'>
       <h1>TRAVEL SWITCH</h1>
     </div>
   );
