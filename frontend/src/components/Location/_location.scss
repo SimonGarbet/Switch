@@ -1,0 +1,170 @@
+.backgroundPicture{
+    position: sticky;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+.globalDayLocation{
+    position: relative;
+    height: 200dvh;
+
+    .datasLocation{
+        border-bottom: #000 solid 5px;
+
+        h3{
+            color: #000;
+        }
+
+        p{
+            color: #000;
+        }
+    }
+
+
+    .descriptionLocation{
+        background-color: rgba($color: #fff, $alpha: 0.5);
+        border: #000 solid 1px;
+
+        h1 h2 p{
+            color: #000;
+        }
+    }
+}
+
+
+
+
+.globalNightLocation{
+    position: relative;
+    height: 200dvh;
+
+
+    .datasLocation{
+        border-bottom: #fff solid 5px;
+
+        h3{
+            color: #fff;
+        }
+
+        p{
+            color: #fff;
+        }
+    }
+
+    .descriptionLocation{
+        background-color: rgba($color: #000, $alpha: 0.5);
+        border: #fff solid 1px;
+
+        h1, h2, p{
+            color: #fff;
+        }
+    }
+
+
+ 
+}
+
+
+
+
+.datasLocation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15dvh;
+    width: 100dvw;
+
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+    h3{
+        font-family: "Vallen Gaye";
+        font-size: 100px;
+        margin-right: 150px;
+        font-weight: 400;
+    }
+
+    div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img{
+            width: 70px;
+            transform: rotate(-90deg);
+        }
+
+        p{
+            font-size: 22px;
+            font-weight: 600;
+            transform: translateY(30px);
+        }
+    }
+
+}
+
+
+
+.descriptionLocation{
+    position: absolute;
+    bottom: 5dvh;
+    left: 5dvw;
+
+    height: 90dvh;
+    width: 90dvw;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1{
+        font-size: 120px;
+        font-family: "Vallen Gaye";
+        font-weight: 400;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    p{
+        text-align: center;
+        margin-top: 100px;
+        width: 80%;
+    }
+
+    div{
+        position: relative;
+        margin-top: 100px;
+
+        .arrowLoopLocation{
+            position: absolute;
+
+            top: 40%;
+            left: 110%;
+
+            width: 100px;
+            transform: rotate(15deg);
+            
+        }
+
+        p{
+            position: absolute;
+            top: 35%;
+            left: 110%;
+        }
+    }
+}

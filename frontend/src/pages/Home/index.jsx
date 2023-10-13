@@ -2,8 +2,7 @@ import React from 'react';
 import {useEffect, useState} from "react";
 
 import Error from '../Error';
-import DayLocation from '../../components/DayLocation';
-import NightLocation from '../../components/NightLocation';
+import Location from '../../components/Location';
 
 import switchLogo from '../../assets/switch-logo.png';
 import arrowLoopB from "../../assets/arrowloopB.png";
@@ -17,6 +16,7 @@ function Home() {
   const randomValueDN = Math.floor(Math.random() * 2); // Détermine de manière aléatoire le mode jour ou nuit de la page d'accueil
   const [dayMode, setDayMode] = useState((randomValueDN=== 0) ? true : false); // Détermine le mode jour ou nuit de la ville à afficher
 
+  const [isDataLoading, setDataLoading] = useState(true);
   const [error, setError] = useState(false);
   const [locationList, setLocationList] = useState([]); // Valeur de récupération du JSON
 
@@ -27,13 +27,12 @@ function Home() {
   useEffect(() => {
     const filteredLocation = locationList.filter((object) => object.id === randomLocation)[0];
     setLocationTarget(filteredLocation); // Génération de l'objet désiré
-    console.log(randomLocation);
-    console.log(filteredLocation);
   }, [randomLocation]);
 
 
     useEffect(() => {
     async function fetchLocations() {
+      setDataLoading(true)
       try {
         const response = await fetch(`/datas/datas.json`)
         const locationList = await response.json()
@@ -42,7 +41,9 @@ function Home() {
       } catch (err) {
         console.log('===== error =====', err)
         setError(true)
-    } 
+    } finally{
+      setDataLoading(false)
+    }
   }
   fetchLocations();
 }, []);
@@ -55,6 +56,7 @@ function Home() {
 
 
   function DayNightToggle() {
+    window.scrollTo(0, 0)
     setDisplayHome(false) // Display none la page d'accueil
     setDayMode(!dayMode) // Change le mode jour/nuit
     const randomLocation = (Math.floor(Math.random() * (locationList.length))+ 1)
@@ -80,18 +82,23 @@ function Home() {
             style = {{transform : (randomValueDN === 0) ? 'rotate(0)' : 'rotate(180deg)'}}/>
             <img src = {arrowLoopW} className='arrowLoopHome' style = {{display : (randomValueDN === 0) ? 'none' : 'block'}}  alt = "Flèche indiquant l'interrupteur"></img>
             <img src = {arrowLoopB} className='arrowLoopHome'  style = {{display : (randomValueDN === 0) ? 'block' : 'none'}} alt = "Flèche indiquant l'interrupteur"></img>
-            <p style = {{color : (randomValueDN === 0) ? '#000' : '#FFF'}}>Appuie sur l'interupteur pour démarrer</p>
+            <p style = {{color : (randomValueDN === 0) ? '#000' : '#FFF'}}>Appuie sur l'interrupteur pour démarrer</p>
           </div>
 
       </section>
 
-      <section style= {{display : (dayMode === true && displayHome === false) ? "block" : "none"}}>
-      <DayLocation DayNightToggle={DayNightToggle} locationTarget={locationTarget}/>
-      </section>
+      { isDataLoading ? (
+        <div>
+          Loading
+        </div>
+      ) : (
+        <section style= {{display : displayHome ? "none" : "block"}}>
+        <Location DayNightToggle={DayNightToggle} locationTarget={locationTarget} dayMode={dayMode}/>
+        </section>
+      )
+      }
 
-      <section style= {{display : (dayMode === false && displayHome === false) ? "block" : "none"}}>
-        <NightLocation DayNightToggle={DayNightToggle} locationTarget={locationTarget}/>
-      </section>
+     
 
 
     </div>
