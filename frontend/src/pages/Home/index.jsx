@@ -21,6 +21,7 @@ function Home() {
   const [locationList, setLocationList] = useState([]); // Valeur de récupération du JSON
 
   const [randomLocation, setRandomLocation] = useState(); // Détermine l'id de la ville à afficher
+  const [viewedRandom, setViewedRandom] = useState([]);  // Récupère les id pour ne pas les proposer deux fois
   const [locationTarget, setLocationTarget] = useState({}); // Valeur de récupération de l'objet à afficher en fonction de l'id
 
 
@@ -56,12 +57,28 @@ function Home() {
 
 
   function DayNightToggle() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0) // Reset en haut de la page
     setDisplayHome(false) // Display none la page d'accueil
     setDayMode(!dayMode) // Change le mode jour/nuit
-    const randomLocation = (Math.floor(Math.random() * (locationList.length))+ 1)
-    setRandomLocation(randomLocation) // Attribution d'un id random
+    RerollRandom(viewedRandom);
   };
+
+
+
+// Cette fonction a pour but de retirer l'id récupérée pour éviter de redonner une destination déjà vue.
+  function RerollRandom (viewedRandom){  
+    const randomLocation = (Math.floor(Math.random() * (locationList.length))+ 1) // Attribution d'un id random
+
+    if (viewedRandom.includes(randomLocation)){
+    RerollRandom(viewedRandom) // Relance nombre aléatoire
+  }  else {
+    viewedRandom.push(randomLocation); // Intégration de l'id choisi pour le mettre dans le tableau
+    setViewedRandom(viewedRandom) // Actualisation de viewedRandom
+
+    setRandomLocation(randomLocation); // Actualisation de randomLocation
+  }
+
+}
 
 
 

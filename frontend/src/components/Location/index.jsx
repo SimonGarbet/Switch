@@ -11,8 +11,6 @@ import '../../scss/style.scss';
 
 function DayLocation({DayNightToggle, locationTarget, dayMode}) {
 
-  console.log(locationTarget)
-
   return (
     <div className={dayMode ? "globalDayLocation" : "globalNightLocation" }>
       <img className='backgroundPicture' src={dayMode ? `${locationTarget?.dayURL}` : `${locationTarget?.nightURL}`} alt='Photographie en arrière plan représentant la ville'/>
@@ -30,7 +28,7 @@ function DayLocation({DayNightToggle, locationTarget, dayMode}) {
       <h2>{locationTarget?.country}</h2>
       <p>{locationTarget?.description}</p>
         <div>
-        <img onClick={DayNightToggle} src={switchLogo} alt='Interrupteur à cliquer' />
+        <img onClick={DayNightToggle} style={{transform: dayMode? "rotate(0)" : "rotate(180deg)"}} src={switchLogo} alt='Interrupteur à cliquer' />
         <img className='arrowLoopLocation' src={dayMode ? `${arrowLoopB}` : `${arrowLoopW}` } alt="Flèche montrant l'interrupteur" />
         <p>Voyage encore !</p>
         </div>
