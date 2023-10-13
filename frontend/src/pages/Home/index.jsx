@@ -1,5 +1,6 @@
 import React from 'react';
 import {useEffect, useState} from "react";
+import { Link } from 'react-router-dom'
 
 import Error from '../Error';
 import Location from '../../components/Location';
@@ -13,6 +14,7 @@ import '../../scss/style.scss';
 function Home() {
 
   const [displayHome, setDisplayHome] = useState(true); // Détermine l'affichage de l'accueil
+  const [displayEnd, setDisplayEnd] = useState(false); // Détermine l'affichage de l'accueil
   const randomValueDN = Math.floor(Math.random() * 2); // Détermine de manière aléatoire le mode jour ou nuit de la page d'accueil
   const [dayMode, setDayMode] = useState((randomValueDN=== 0) ? true : false); // Détermine le mode jour ou nuit de la ville à afficher
 
@@ -69,7 +71,11 @@ function Home() {
   function RerollRandom (viewedRandom){  
     const randomLocation = (Math.floor(Math.random() * (locationList.length))+ 1) // Attribution d'un id random
 
-    if (viewedRandom.includes(randomLocation)){
+    if (viewedRandom.length === locationList.length) {
+      setDisplayEnd(true)
+    }
+
+    else if (viewedRandom.includes(randomLocation)){
     RerollRandom(viewedRandom) // Relance nombre aléatoire
   }  else {
     viewedRandom.push(randomLocation); // Intégration de l'id choisi pour le mettre dans le tableau
@@ -96,7 +102,7 @@ function Home() {
 
           <div className='blockSwitch' onClick={DayNightToggle}>
             <img src={switchLogo} alt='Interrupteur à cliquer'
-            style = {{transform : (randomValueDN === 0) ? 'rotate(0)' : 'rotate(180deg)'}}/>
+            style = {{transform : (randomValueDN === 0) ? 'rotate(0)' : 'rotate(180deg)', cursor: "pointer"}}/>
             <img src = {arrowLoopW} className='arrowLoopHome' style = {{display : (randomValueDN === 0) ? 'none' : 'block'}}  alt = "Flèche indiquant l'interrupteur"></img>
             <img src = {arrowLoopB} className='arrowLoopHome'  style = {{display : (randomValueDN === 0) ? 'block' : 'none'}} alt = "Flèche indiquant l'interrupteur"></img>
             <p style = {{color : (randomValueDN === 0) ? '#000' : '#FFF'}}>Appuie sur l'interrupteur pour démarrer</p>
@@ -104,12 +110,20 @@ function Home() {
 
       </section>
 
+      <section className='globalEnd'
+      style = {{ background : dayMode ? '#ECE2D0' : '#01295F' , display : displayEnd ? "flex" : "none"}}>
+        <h1>TRAVEL<br/>SWITCH</h1>
+        <h2 style = {{color : dayMode ? '#000' : '#FFF'}}>Vous avez visité toutes les destinations</h2>
+        <p onClick={() => {setDisplayHome(true); setDisplayEnd(false); setViewedRandom([]);}} className='homeRedirection' style = {{color : dayMode ? '#000' : '#FFF'}}>Revenir à l'accueil</p>
+        <p style = {{color : dayMode ? '#000' : '#FFF'}}>Vous pouvez me suggérer de nouvelles destinations à l'adresse <strong>contact@simongarbet.com</strong></p>
+      </section>
+
       { isDataLoading ? (
         <div>
           Loading
         </div>
       ) : (
-        <section style= {{display : displayHome ? "none" : "block"}}>
+        <section style= {{display : (displayHome || displayEnd ) ? "none" : "block"}}>
         <Location DayNightToggle={DayNightToggle} locationTarget={locationTarget} dayMode={dayMode}/>
         </section>
       )

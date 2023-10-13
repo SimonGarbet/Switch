@@ -6,8 +6,9 @@ import '../../scss/style.scss';
 
 function Error() {
   return (
-    <div>
-      <h1>ERROR</h1>
+    <div className='globalError'>
+      <h1>ERROR 404</h1>
+      <Link to={'/'}>Revenir à l'accueil</Link>
     </div>
   );
 }
