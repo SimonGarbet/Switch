@@ -20,8 +20,16 @@ function Home() {
   const [error, setError] = useState(false);
   const [locationList, setLocationList] = useState([]); // Valeur de récupération du JSON
 
-  const [randomLocation, setRandomLocation] = useState(1); // Détermine l'id de la ville à afficher
+  const [randomLocation, setRandomLocation] = useState(); // Détermine l'id de la ville à afficher
   const [locationTarget, setLocationTarget] = useState({}); // Valeur de récupération de l'objet à afficher en fonction de l'id
+
+
+  useEffect(() => {
+    const filteredLocation = locationList.filter((object) => object.id === randomLocation)[0];
+    setLocationTarget(filteredLocation); // Génération de l'objet désiré
+    console.log(randomLocation);
+    console.log(filteredLocation);
+  }, [randomLocation]);
 
 
     useEffect(() => {
@@ -30,12 +38,11 @@ function Home() {
         const response = await fetch(`/datas/datas.json`)
         const locationList = await response.json()
         setLocationList(locationList)
-        setRandomLocation((Math.floor(Math.random() * (locationList.length))+ 1))
-        setLocationTarget(locationList.filter((object) => object.id === randomLocation))
+
       } catch (err) {
         console.log('===== error =====', err)
         setError(true)
-    }
+    } 
   }
   fetchLocations();
 }, []);
@@ -50,11 +57,9 @@ function Home() {
   function DayNightToggle() {
     setDisplayHome(false) // Display none la page d'accueil
     setDayMode(!dayMode) // Change le mode jour/nuit
-    setRandomLocation(Math.floor(Math.random() * (locationList.length))+ 1) // Attribution d'un id random
-    setLocationTarget(locationList.filter((object) => object.id === randomLocation)) // Génération de l'objet désiré
-    console.log(randomLocation)
-    console.log(locationTarget)
-  }
+    const randomLocation = (Math.floor(Math.random() * (locationList.length))+ 1)
+    setRandomLocation(randomLocation) // Attribution d'un id random
+  };
 
 
 
