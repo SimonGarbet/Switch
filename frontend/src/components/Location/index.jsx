@@ -16,11 +16,14 @@ function DayLocation({DayNightToggle, locationTarget, dayMode}) {
       <img className='backgroundPicture' src={dayMode ? `${locationTarget?.dayURL}` : `${locationTarget?.nightURL}`} alt='Photographie en arrière plan représentant la ville'/>
 
       <section className='datasLocation'>
-        <div>
+        <div className='scrollDatas'>
           <img className='arrowLoopLocation' src={dayMode ? `${arrowLoopB}` : `${arrowLoopW}` } alt="Flèche montrant l'interrupteur" />
           <p>Scrolle</p>
         </div>
+        <div className='distanceDatas'>
         <h3>{locationTarget?.distance}</h3>
+        <p>Depuis Paris</p>
+        </div>
       </section>
 
       <section className='descriptionLocation'>
