@@ -101,10 +101,9 @@ function Home() {
           <h1>TRAVEL<br/>SWITCH</h1>
 
           <div className='blockSwitch' onClick={DayNightToggle}>
-            <img src={switchLogo} alt='Interrupteur à cliquer'
+            <img src={switchLogo} className='switchLogoHome' alt='Interrupteur à cliquer'
             style = {{transform : (randomValueDN === 0) ? 'rotate(0)' : 'rotate(180deg)', cursor: "pointer"}}/>
-            <img src = {arrowLoopW} className='arrowLoopHome' style = {{display : (randomValueDN === 0) ? 'none' : 'block'}}  alt = "Flèche indiquant l'interrupteur"></img>
-            <img src = {arrowLoopB} className='arrowLoopHome'  style = {{display : (randomValueDN === 0) ? 'block' : 'none'}} alt = "Flèche indiquant l'interrupteur"></img>
+            <img src = {(randomValueDN===0) ? `${arrowLoopB}` : `${arrowLoopW}` } className='arrowLoopHome' alt = "Flèche indiquant l'interrupteur"></img>
             <p style = {{color : (randomValueDN === 0) ? '#000' : '#FFF'}}>Appuie sur l'interrupteur pour démarrer</p>
           </div>
 

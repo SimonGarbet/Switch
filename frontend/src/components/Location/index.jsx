@@ -28,7 +28,7 @@ function DayLocation({DayNightToggle, locationTarget, dayMode}) {
       <h2>{locationTarget?.country}</h2>
       <p>{locationTarget?.description}</p>
         <div>
-        <img onClick={DayNightToggle} style={{transform: dayMode? "rotate(0)" : "rotate(180deg)", cursor: "pointer"}} src={switchLogo} alt='Interrupteur à cliquer' />
+        <img  className='switchLogoLocation' onClick={DayNightToggle} style={{transform: dayMode? "rotate(0)" : "rotate(180deg)", cursor: "pointer"}} src={switchLogo} alt='Interrupteur à cliquer' />
         <img className='arrowLoopLocation' src={dayMode ? `${arrowLoopB}` : `${arrowLoopW}` } alt="Flèche montrant l'interrupteur" />
         <p>Voyage encore !</p>
         </div>

@@ -25,3 +25,37 @@
 
 
 }
+
+@media (max-width : 1000px){
+
+    .globalError{
+    
+            h1{
+                font-size: 120px;
+            }
+    
+            a{
+                font-size: 35px;
+            }
+    
+    
+    }
+
+
+}
+
+@media (max-width : 700px){
+    .globalError{
+    
+        h1{
+            font-size: 60px;
+        }
+
+        a{
+            font-size: 20px;
+        }
+
+
+}
+
+}

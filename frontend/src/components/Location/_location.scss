@@ -76,28 +76,33 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 15dvh;
+    height: 190px;
     width: 100dvw;
 
     backdrop-filter: blur(8px);
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 
 
     h3{
         font-family: "Vallen Gaye";
-        font-size: 100px;
-        margin-right: 150px;
+        font-size: 90px;
+        margin-right: 10dvw;
         font-weight: 400;
     }
 
     div{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        margin-left: 10dvw;
+        gap: 40px;
+
 
         img{
             width: 70px;
@@ -107,7 +112,6 @@
         p{
             font-size: 22px;
             font-weight: 600;
-            transform: translateY(30px);
         }
     }
 
@@ -167,4 +171,139 @@
             left: 110%;
         }
     }
+}
+
+@media (max-width : 1000px){
+    
+
+    
+    .datasLocation{
+    
+    
+        h3{
+            font-size: 60px;
+        }
+    
+        div{
+    
+            p{
+                font-size: 16px;
+            }
+        }
+    
+    }
+    
+    
+    
+    .descriptionLocation{
+    
+        h1{
+            font-size: 80px;
+        }
+    
+        h2{
+            font-size: 40px;
+        }
+    
+        p{
+            margin-top: 80px;
+        }
+    
+        div{
+            margin-top: 80px;
+
+            .switchLogoLocation{
+                width: 30dvw;
+            }
+    
+            .arrowLoopLocation{
+                position: absolute;
+    
+                top: 40%;
+                left: 110%;
+    
+                width: 100px;
+                transform: rotate(15deg);
+                
+            }
+    
+            p{
+                position: absolute;
+                top: 35%;
+                left: 110%;
+            }
+        }
+    }
+
+
+
+}
+
+@media (max-width : 700px){
+    
+
+    
+    .datasLocation{
+    
+    
+        h3{
+            font-size: 40px;
+        }
+    
+        div{
+
+            gap: 30px;
+
+            img{
+                width: 40px;
+            }
+    
+            p{
+                font-size: 12px;
+            }
+        }
+    
+    }
+    
+    
+    
+    .descriptionLocation{
+    
+        h1{
+            font-size: 35px;
+        }
+    
+        h2{
+            font-size: 25px;
+        }
+    
+        p{
+            font-size: 10px;
+            margin-top: 30px;
+        }
+    
+        div{
+            margin-top: 70px;
+
+            .switchLogoLocation{
+                width: 30dvw;
+            }
+    
+            .arrowLoopLocation{
+                display: none;
+                
+            }
+    
+            p{
+                position: absolute;
+                top: -20%;
+                left: 0;
+                width: 30dvw;
+                margin-top: 0;
+            }
+        }
+    }
+
+
+
 }
