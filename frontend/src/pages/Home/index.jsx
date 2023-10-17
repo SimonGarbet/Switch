@@ -37,7 +37,7 @@ function Home() {
     async function fetchLocations() {
       setDataLoading(true)
       try {
-        const response = await fetch(`/datas/datas.json`)
+        const response = await fetch(`/datas/locations.json`)
         const locationList = await response.json()
         setLocationList(locationList)
 
